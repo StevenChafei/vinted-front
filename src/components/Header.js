@@ -1,4 +1,4 @@
-import logo from "../img/vinted_logo.png";
+import logo from "../assets/img/vinted_logo.png";
 
 const Header = () => {
   return (

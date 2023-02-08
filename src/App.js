@@ -1,6 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import logo from "./img/home-picture.jpeg";
+import logo from "./assets/img/home-picture.jpeg";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 // Pages
 
