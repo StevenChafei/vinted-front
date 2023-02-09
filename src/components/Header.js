@@ -4,7 +4,10 @@ const Header = () => {
   return (
     <div>
       <header className="content">
-        <img src={logo} alt="logo vinted" />
+        <a href="/">
+          {" "}
+          <img src={logo} alt="logo vinted" />
+        </a>
 
         <div className="searchBar">
           <form>
@@ -13,8 +16,12 @@ const Header = () => {
         </div>
 
         <div>
-          <button>S'inscrire</button>
-          <button>Se connecter</button>
+          <a href="/signup">
+            <button>S'inscrire</button>
+          </a>
+          <a href="/login">
+            <button>Se connecter</button>
+          </a>
         </div>
         <button className="sellButton">Vends tes articles</button>
       </header>

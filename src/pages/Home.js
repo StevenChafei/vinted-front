@@ -41,59 +41,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div>
+      <div className="parent">
         {data.offers.map((offer) => {
           return <OfferCard offerInfos={offer} key={offer._id} />;
         })}
       </div>
-
-      {/* <Link>
-        <article>
-          <section className="try">
-            {data.offers.map((offer, index) => {
-              console.log(offer);
-
-              return (
-                <div>
-                  <div key={offer._id}>
-                    <div className="owner">
-                      {offer.owner.account.avatar && (
-                        <img
-                          className="avatar"
-                          style={{
-                            height: 25,
-                            width: 25,
-                            borderRadius: "50%",
-                            objectFit: "cover",
-                          }}
-                          src={offer.owner.account.avatar.secure_url}
-                          alt="owner"
-                        />
-                      )}
-                      <span className="username">
-                        {offer.owner.account.username}
-                      </span>
-                    </div>
-                    <img
-                      className="test"
-                      src={offer.product_image.secure_url}
-                      alt=""
-                    />
-                    <span>{offer.product_price} €</span> <br />
-                    <span className="brand">
-                      <span className="size">
-                        {offer.product_details[1].TAILLE}
-                      </span>{" "}
-                      <br />
-                      {offer.product_details[0].MARQUE}
-                    </span>
-                  </div>
-                </div>
-              );
-            })}
-          </section>
-        </article>
-      </Link> */}
     </main>
   );
 };
