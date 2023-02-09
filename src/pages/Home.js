@@ -1,6 +1,7 @@
 // import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
+// import bannerwide from
 
 const Home = () => {
   // State qui me sert à récupérer la data
@@ -29,7 +30,43 @@ const Home = () => {
     fetchData();
   }, []);
 
-  return <h1>Je suis la page Home</h1>;
+  return isLoading ? (
+    <p>Loading ...</p>
+  ) : (
+    <main>
+      {/* <section className="megabanner-container"> */}
+      {/* <img alt="Vinted megabanner" src={Home} /> */}
+      {/* </section> */}
+
+      <section className="try">
+        {data.offers.map((offer, index) => {
+          console.log(offer);
+
+          return (
+            <div>
+              <div key={offer._id}>
+                <span className="username">{offer.owner.account.username}</span>
+                <img
+                  className="test"
+                  src={offer.product_image.secure_url}
+                  alt=""
+                />
+                <span>{offer.product_price} €</span> <br />
+                <span className="brand">
+                  <span className="size">
+                    {offer.product_details[1].TAILLE}
+                  </span>{" "}
+                  <br />
+                  {offer.product_details[0].MARQUE}
+                </span>
+              </div>
+            </div>
+          );
+        })}
+      </section>
+    </main>
+  );
 };
+// return <h1>Je suis la page Home</h1>;
 
 export default Home;

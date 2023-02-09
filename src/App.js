@@ -1,8 +1,5 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import logo from "./assets/img/home-picture.jpeg";
-import { useState, useEffect } from "react";
-import axios from "axios";
 
 // Pages
 
@@ -18,7 +15,11 @@ function App() {
       <Header />
 
       <div className="heropics">
-        <img src={logo} alt="test" />
+        <img
+          className="home-hero-forme"
+          src="https://lereacteur-vinted.netlify.app/static/media/tear.884480420945b3afd77b44a6c5f98567.svg"
+          alt="forme"
+        ></img>
         <div className="block">
           <h1>Prêts à faire du tri dans vos placards ?</h1>
           <button className="startSell">Commencer à vendre</button>
