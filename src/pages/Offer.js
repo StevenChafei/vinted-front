@@ -31,16 +31,18 @@ const Offer = () => {
   ) : (
     <div className="offer">
       <div className="offerDetail">
-        <img src={data.product_image.secure_url} alt="product" />
+        <div className="pics">
+          <img src={data.product_image.secure_url} alt="product" />
+        </div>
+
         <p>{data.product_price} €</p>
         {/* Je parcours product_details */}
         {data.product_details.map((detail, index) => {
-          // Je récupère le nomde la clef de detail
+          // Je récupère le nom de la clef de detail
           const key = Object.keys(detail)[0];
-          // console.log(key);
-          // console.log(detail[key]);
+
           return (
-            <div key={index}>
+            <div className="key" key={index}>
               {/* J'affiche le nom dela clef  */}
               <span>{key} : </span>
               {/* et son contenu */}

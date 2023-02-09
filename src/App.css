@@ -105,24 +105,24 @@ Header {
   justify-content: space-around;
 }
 
-.test {
+.parent {
   display: flex;
-
-  border: solid 1px red;
-  flex-direction: row;
+  border: solid 3px red;
+  justify-content: space-between;
 }
 
-.try {
-  border: solid 1px red;
-  object-fit: cover;
-  max-width: 1280px;
+.child {
+  border: solid 2px green;
+  /* max-width: 1280px;
   margin: 0 auto;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 40px; */
 }
 
 .pictures {
-  border: solid 1px red;
+  width: 235px;
+  height: 426px;
+  object-fit: cover;
 }
 
 .owner {
@@ -147,6 +147,13 @@ Header {
 
 .offerDetail {
   border: solid 1px red;
-  align-content: space-around;
-  justify-content: center;
+}
+
+.pics {
+  background-color: blue;
+  border: solid 1px red;
+}
+
+.key {
+  background-color: green;
 }
