@@ -62,7 +62,7 @@ button {
   width: 360px;
   height: 220px;
   position: absolute;
-  top: 150px;
+  top: 100px;
   left: 120px;
   padding: 25px;
 }
@@ -105,7 +105,11 @@ Header {
   justify-content: space-around;
 }
 
-.test {
+.owner {
+  display: flex;
+}
+
+.try {
   display: flex;
   /* border: solid 1px red; */
   width: 235px;
@@ -113,21 +117,31 @@ Header {
   object-fit: cover;
 }
 
-.try {
+/* .try {
   max-width: 1280px;
   margin: 0 auto;
-  /* border: solid 1px red */
   gap: 20px;
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
+} */
+
+.pictures {
+  border: solid 1px red;
+}
+
+.owner {
+  margin-bottom: 10px;
+}
+
+.avatar {
+  margin-right: 10px;
+  margin-bottom: -5px;
 }
 
 .username {
-  /* border: solid 1px red; */
   font-size: 14px;
   color: grey;
-  margin-bottom: 10px;
 }
 
 .brand {
