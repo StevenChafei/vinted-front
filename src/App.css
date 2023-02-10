@@ -28,6 +28,12 @@ button {
   border-radius: 5px;
 }
 
+.deconnexion {
+  color: white;
+  background-color: rgb(243, 85, 85);
+  border: none;
+}
+
 .sellButton {
   color: white;
   background-color: #2cb1ba;
@@ -193,6 +199,12 @@ a:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.forms {
+  display: flex;
+  flex-direction: column;
 }
 
 h2 {
