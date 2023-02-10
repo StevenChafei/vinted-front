@@ -10,8 +10,8 @@ const Signup = () => {
         <label className="forms">
           <input type="text" name="username" placeholder="Nom d'utilisateur" />
           <br />
-          <input type="text" name="email" placeholder="Email" /> <br />
-          <input type="text" name="password" placeholder="Mot de passe" />
+          <input type="email" name="email" placeholder="Email" /> <br />
+          <input type="password" name="password" placeholder="Mot de passe" />
           <br />
         </label>
         <div className="newsletter">
@@ -33,7 +33,7 @@ const Signup = () => {
         </div>
         <input className="submit" type="submit" value="S'inscrire" /> <br />
         <a href="/login">Tu as déjà un compte ? Connecte-toi !</a>
-      </form>{" "}
+      </form>
     </div>
   );
 };

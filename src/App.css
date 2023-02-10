@@ -87,14 +87,13 @@ h1 {
 Header {
   margin: 0 auto;
   margin-bottom: 40px;
-  /* border: solid 1px red; */
   max-width: 1240px;
   max-height: 60px;
 }
 
 .Home {
   margin: 0 auto;
-  border: solid 1px red;
+  /* border: solid 1px red; */
   max-width: 1240px;
   max-height: 60px;
 }
@@ -117,6 +116,14 @@ Header {
 
 .child {
   margin-bottom: 10px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000000;
+  text-decoration: none;
 }
 
 .pictures {
@@ -209,6 +216,7 @@ h2 {
   height: 45px;
   font-size: 16px;
   border-radius: 5px;
+  margin-top: 20px;
 }
 
 .forms input {
