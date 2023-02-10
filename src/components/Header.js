@@ -1,4 +1,4 @@
-import logo from "../assets/img/vinted_logo.png";
+import logo from "../assets/img/logovinted.png";
 import { Link } from "react-router-dom";
 
 const Header = ({ handleToken, userToken }) => {
