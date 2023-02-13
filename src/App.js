@@ -9,10 +9,10 @@ import Home from "./pages/Home";
 import Offer from "./pages/Offer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Publish from "./pages/Publish";
 
 // Components
 import Header from "./components/Header";
-import Publish from "./pages/Publish";
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);

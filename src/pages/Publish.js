@@ -1,7 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 
-const Publish = (userToken) => {
+const Publish = ({ token }) => {
+  console.log(token);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -10,7 +11,7 @@ const Publish = (userToken) => {
   const [brand, setBrand] = useState("");
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
-  const [picture, setPicture] = useState();
+  const [picture, setPicture] = useState(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -19,25 +20,26 @@ const Publish = (userToken) => {
       const formData = new FormData();
 
       formData.append("picture", picture);
-      formData.append("title", title);
-      formData.append("description", description);
-      formData.append("condition", condition);
-      formData.append("price", price);
-      formData.append("city", city);
-      formData.append("brand", brand);
-      formData.append("color", color);
-      formData.append("size", size);
+      //   formData.append("title", title);
+      //   formData.append("description", description);
+      //   formData.append("condition", condition);
+      //   formData.append("price", price);
+      //   formData.append("city", city);
+      //   formData.append("brand", brand);
+      //   formData.append("color", color);
+      //   formData.append("size", size);
 
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
         formData,
         {
           headers: {
-            authorization: `Bearer ${userToken}`,
+            authorization: `Bearer ${token}`,
           },
         }
       );
-      console.log(response);
+      //   console.log(token);
+      //   console.log(response);
     } catch (error) {
       console.log(error.response);
     }
@@ -55,6 +57,7 @@ const Publish = (userToken) => {
               title="foo"
               placeholder="Ajoute une photo"
               onChange={(event) => {
+                console.log(event.target.files[0]);
                 setPicture(event.target.files[0]);
               }}
             />
@@ -113,7 +116,7 @@ const Publish = (userToken) => {
             </div>
 
             <div className="article">
-              <label for="name">Couleur</label>
+              <label>Couleur</label>
               <input
                 value={color}
                 type="text"
