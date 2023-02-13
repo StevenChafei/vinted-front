@@ -3,7 +3,7 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const Offer = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
 
   // Je récupère l'id présent dans l'url
@@ -39,6 +39,7 @@ const Offer = () => {
           {/* Je parcours product_details */}
           {data.product_details.map((detail, index) => {
             // Je récupère le nom de la clef de detail
+            console.log(detail);
             const key = Object.keys(detail)[0];
 
             return (

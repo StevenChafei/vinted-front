@@ -12,6 +12,7 @@ import Login from "./pages/Login";
 
 // Components
 import Header from "./components/Header";
+import Publish from "./pages/Publish";
 
 function App() {
   const [userToken, setUserToken] = useState(Cookies.get("userToken") || null);
@@ -32,6 +33,7 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/publish" element={<Publish />} />
         <Route path="/offer/:id" element={<Offer />} />
         <Route path="/signup" element={<Signup handleToken={handleToken} />} />
         <Route path="/login" element={<Login handleToken={handleToken} />} />

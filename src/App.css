@@ -265,3 +265,110 @@ h2 {
   padding-top: 10px;
   display: flex;
 }
+
+/*  VENDRE ARTICLES */
+
+.container {
+  background-color: rgb(228, 228, 228);
+}
+
+h3 {
+  font-family: "Roboto";
+  font-size: 20px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.publish {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sell-article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  border: solid rgb(203, 203, 203) 1px;
+  max-width: 1240px;
+  height: 300px;
+  margin-bottom: 30px;
+}
+
+.first-description,
+.second-description,
+.third-description {
+  font-family: "Roboto";
+  border: solid rgb(203, 203, 203) 1px;
+  background-color: white;
+  max-width: 1240px;
+  margin-bottom: 30px;
+  /* border: none; */
+}
+
+.article {
+  display: flex;
+  /* border: solid red 1px; */
+  justify-content: space-around;
+  font-family: "Roboto";
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.article input {
+  width: 620px;
+  margin: 20px 15px 50px 15px;
+  /* border: solid red 1px; */
+  font-display: flex;
+  justify-content: flex-end;
+  border: none;
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.article label {
+  margin: 20px 15px 50px 15px;
+  width: 620px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.price-article label,
+.exchange-article p,
+.exchange-article input {
+  margin: 20px 15px 50px 15px;
+  width: 620px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.price-article input {
+  width: 620px;
+  margin: 20px 15px 50px 15px;
+  /* border: solid red 1px; */
+  font-display: flex;
+  justify-content: flex-end;
+  border: none;
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
+.price-article,
+.exchange-article {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Roboto";
+}
+
+.add-article {
+  display: flex;
+  /* border: red solid 1px; */
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.add-article input {
+  width: 100px;
+}
