@@ -1,7 +1,7 @@
 import logo from "../assets/img/logovinted.png";
 import { Link } from "react-router-dom";
 
-const Header = ({ handleToken, userToken }) => {
+const Header = ({ handleToken, userToken, search, setSearch }) => {
   return (
     <div>
       <header className="content">
@@ -11,7 +11,14 @@ const Header = ({ handleToken, userToken }) => {
 
         <div className="searchBar">
           <form>
-            <input type="search" placeholder="Rechercher des articles..." />
+            <input
+              value={search}
+              type="search"
+              placeholder="Rechercher des articles..."
+              onChange={(event) => {
+                setSearch(event.target.value);
+              }}
+            />
           </form>
         </div>
 
@@ -19,7 +26,7 @@ const Header = ({ handleToken, userToken }) => {
           {!userToken ? (
             <>
               <Link to="/signup">
-                <button>S'inscrire</button>
+                <button className="signup-button">S'inscrire</button>
               </Link>
               <Link to="/login">
                 <button>Se connecter</button>
@@ -36,7 +43,7 @@ const Header = ({ handleToken, userToken }) => {
             </button>
           )}
         </div>
-        <Link to="/publish">
+        <Link to={userToken ? "/publish" : "/"}>
           <button className="sellButton">Vends tes articles</button>
         </Link>
       </header>

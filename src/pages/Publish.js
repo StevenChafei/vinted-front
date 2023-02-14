@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
-const Publish = ({ token }) => {
-  console.log(token);
+const Publish = ({ userToken }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -11,7 +11,9 @@ const Publish = ({ token }) => {
   const [brand, setBrand] = useState("");
   const [size, setSize] = useState("");
   const [color, setColor] = useState("");
-  const [picture, setPicture] = useState(null);
+  const [picture, setPicture] = useState({});
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -20,47 +22,50 @@ const Publish = ({ token }) => {
       const formData = new FormData();
 
       formData.append("picture", picture);
-      //   formData.append("title", title);
-      //   formData.append("description", description);
-      //   formData.append("condition", condition);
-      //   formData.append("price", price);
-      //   formData.append("city", city);
-      //   formData.append("brand", brand);
-      //   formData.append("color", color);
-      //   formData.append("size", size);
+      formData.append("title", title);
+      formData.append("description", description);
+      formData.append("condition", condition);
+      formData.append("price", price);
+      formData.append("city", city);
+      formData.append("brand", brand);
+      formData.append("color", color);
+      formData.append("size", size);
 
       const response = await axios.post(
         "https://lereacteur-vinted-api.herokuapp.com/offer/publish",
         formData,
         {
           headers: {
-            authorization: `Bearer ${token}`,
+            authorization: `Bearer ${userToken}`,
+            "Content-Type": "multipart/form-data",
           },
         }
       );
-      //   console.log(token);
-      //   console.log(response);
+      console.log(response);
+      navigate("/");
     } catch (error) {
       console.log(error.response);
     }
   };
 
-  return (
+  return userToken ? (
     <div className="container">
       <div className="publish">
         <h3> Vends ton article</h3>
 
         <form onSubmit={handleSubmit}>
           <div className="sell-article">
-            <input
-              type="file"
-              title="foo"
-              placeholder="Ajoute une photo"
-              onChange={(event) => {
-                console.log(event.target.files[0]);
-                setPicture(event.target.files[0]);
-              }}
-            />
+            {/* {picture && <img src={URL.createObjectURL(picture)} alt="pics" />} */}
+            <label className="picture-article">
+              <input
+                type="file"
+                onChange={(event) => {
+                  console.log(event.target.files[0]);
+                  setPicture(event.target.files[0]);
+                }}
+              />
+              + Ajoute une photo
+            </label>
           </div>
 
           <div className="first-description">
@@ -79,11 +84,14 @@ const Publish = ({ token }) => {
 
             <div className="article">
               <label for="name">Décris ton article</label>
-              <input
+              <textarea
+                className="textarea-article"
                 value={description}
+                rows="10"
+                cols="30"
                 type="text"
                 name="Décris ton article"
-                placeholder="ex : porté quelquefois, taille coorectemment"
+                placeholder="ex : porté quelquefois, taille correctemment"
                 onChange={(event) => {
                   setDescription(event.target.value);
                 }}
@@ -163,7 +171,7 @@ const Publish = ({ token }) => {
               />
             </div>
             <div className="exchange-article">
-              <input type="checkbox"></input>
+              <input className="checkbox-article" type="checkbox"></input>
               <p>Je suis intéressé(e) par les échanges</p>
             </div>
           </div>
@@ -173,6 +181,8 @@ const Publish = ({ token }) => {
         </form>
       </div>
     </div>
+  ) : (
+    <Navigate to="/login " />
   );
 };
 

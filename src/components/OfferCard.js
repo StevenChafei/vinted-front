@@ -31,7 +31,7 @@ const OfferCard = ({ offerInfos }) => {
           <p>{offerInfos.product_price} €</p>
           {/* <p> Taille : {offerInfos.product_details[1].TAILLE}</p> */}
           {/* Column-reverse permet d'inverser l'ordre de mes p */}
-          <div>
+          <div className="detail-offercard">
             {offerInfos.product_details.map((detail, index) => {
               if (detail.TAILLE) {
                 return <p key={index}>{detail.TAILLE}</p>;

@@ -7,6 +7,8 @@
   width: 150px;
 }
 
+/*  HEADER */
+
 header input {
   width: 600px;
   height: 40px;
@@ -18,13 +20,17 @@ header input {
   padding-left: 10px;
 }
 
+.signup-button input {
+  margin-left: 20px;
+}
+
 button {
   background-color: white;
   color: #2cb1ba;
   border: solid 1px #2cb1ba;
   width: 120px;
   height: 28px;
-  /* margin-left: 20px; */
+  margin-left: 20px;
   border-radius: 5px;
 }
 
@@ -153,6 +159,55 @@ a:active {
   text-decoration: none;
 }
 
+.detail-offercard {
+  /* border: solid 1px red; */
+  color: grey;
+  font-size: 14px;
+}
+
+/*  DESCRIPTION D'UN ARTICLE */
+
+.key {
+  /* border: solid 1px red; */
+  /* line-height: 50%; */
+  font-size: 14px;
+  display: flex;
+}
+
+.key-search {
+  /* border: solid 1px red; */
+  color: grey;
+  width: 130px;
+}
+
+.key-result {
+  display: flex;
+}
+
+.prix-article {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.name-article {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.desc-article {
+  color: grey;
+  font-size: 16px;
+  text-align: start;
+}
+
+.avatar-article {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .offer {
   background-color: #eaedee;
 }
@@ -170,6 +225,7 @@ a:active {
   object-fit: cover;
   width: 450px;
   height: 605px;
+  margin-bottom: 50px;
 }
 
 .offer-info {
@@ -179,6 +235,7 @@ a:active {
   justify-content: space-between;
   padding: 40px;
   width: 320px;
+  margin-bottom: 50px;
 }
 
 .offer-info button {
@@ -193,6 +250,8 @@ a:active {
   padding: 0 16px;
   width: 100%;
 }
+
+/*  FORMULAIRE LOGIN AND SIGNUP */
 
 .formulaire {
   font-family: "Roboto";
@@ -297,6 +356,8 @@ h3 {
   max-width: 1240px;
   height: 300px;
   margin-bottom: 30px;
+  outline-offset: -25px;
+  outline: 1px dashed rgb(182, 177, 177);
 }
 
 .first-description,
@@ -318,6 +379,16 @@ h3 {
   border-bottom: solid 1px rgb(212, 212, 212);
 }
 
+.textarea-article {
+  width: 620px;
+  margin: 20px 15px 50px 15px;
+  /* border: solid red 1px; */
+  font-display: flex;
+  justify-content: flex-end;
+  border: none;
+  border-bottom: solid 1px rgb(212, 212, 212);
+}
+
 .article input {
   width: 620px;
   margin: 20px 15px 50px 15px;
@@ -330,6 +401,7 @@ h3 {
 
 .article label {
   margin: 20px 15px 50px 15px;
+  /* border: solid red 1px; */
   width: 620px;
   display: flex;
   justify-content: flex-start;
@@ -354,11 +426,22 @@ h3 {
   border-bottom: solid 1px rgb(212, 212, 212);
 }
 
-.price-article,
-.exchange-article {
+.price-article {
   display: flex;
   justify-content: space-around;
   font-family: "Roboto";
+}
+
+.exchange-article {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input .checkbox-article {
+  padding: 0;
+  width: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .add-article {
@@ -371,4 +454,19 @@ h3 {
 
 .add-article input {
   width: 100px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.picture-article {
+  font-family: "Roboto";
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #2cb1ba;
+  border: #2cb1ba 2px solid;
+  border-radius: 5px;
 }

@@ -35,7 +35,7 @@ const Offer = () => {
           <img src={data.product_image.secure_url} alt="product" />
         </div>
         <div className="offer-info">
-          <p>{data.product_price} €</p>
+          <p className="prix-article">{data.product_price} €</p>
           {/* Je parcours product_details */}
           {data.product_details.map((detail, index) => {
             // Je récupère le nom de la clef de detail
@@ -45,15 +45,31 @@ const Offer = () => {
             return (
               <div className="key" key={index}>
                 {/* J'affiche le nom dela clef  */}
-                <span>{key} : </span>
+                <span className="key-search">{key} : </span>
                 {/* et son contenu */}
-                <span>{detail[key]}</span>
+                <span className="key-result">{detail[key]}</span>
               </div>
             );
           })}
-          <p>{data.product_name}</p>
-          <p>{data.product_description}</p>
-          <p>{data.owner.account.username}</p>
+          <p className="name-article">{data.product_name}</p>
+          <p className="desc-article">{data.product_description}</p>
+
+          <div className="avatar-article">
+            {data.owner.account.avatar && (
+              <img
+                className="avatar"
+                style={{
+                  height: 50,
+                  width: 50,
+                  borderRadius: "50%",
+                  objectFit: "cover",
+                }}
+                src={data.owner.account.avatar.secure_url}
+                alt="owner"
+              />
+            )}
+            <span>{data.owner.account.username}</span>
+          </div>
           <button>Acheter</button>
         </div>
       </div>
