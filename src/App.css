@@ -30,7 +30,7 @@ button {
   border: solid 1px #2cb1ba;
   width: 120px;
   height: 28px;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   border-radius: 5px;
 }
 
@@ -469,4 +469,14 @@ input[type="file"] {
   color: #2cb1ba;
   border: #2cb1ba 2px solid;
   border-radius: 5px;
+}
+
+.payement {
+  font-weight: bold;
+  font-family: "Roboto";
+  display: flex;
+  justify-content: center;
+  line-height: 200%;
+
+  /* flex-direction: column; */
 }
