@@ -105,7 +105,6 @@ Header {
 
 .Home {
   margin: 0 auto;
-  /* border: solid 1px red; */
   max-width: 1240px;
   max-height: 60px;
 }
@@ -160,7 +159,6 @@ a:active {
 }
 
 .detail-offercard {
-  /* border: solid 1px red; */
   color: grey;
   font-size: 14px;
 }
@@ -168,14 +166,11 @@ a:active {
 /*  DESCRIPTION D'UN ARTICLE */
 
 .key {
-  /* border: solid 1px red; */
-  /* line-height: 50%; */
   font-size: 14px;
   display: flex;
 }
 
 .key-search {
-  /* border: solid 1px red; */
   color: grey;
   width: 130px;
 }
@@ -250,6 +245,20 @@ a:active {
   padding: 0 16px;
   width: 100%;
 }
+/* .buy-article {
+  background: #09b1ba;
+  border: 1px solid #09b1ba;
+  border-radius: 4px;
+  color: white;
+  font-size: 16px;
+  height: 36px;
+  line-height: 36px;
+  margin-top: 32px;
+  /* padding: 0 16px; 
+  width: 100%;
+  justify-content: center;
+  display: flex;
+} */
 
 /*  FORMULAIRE LOGIN AND SIGNUP */
 
@@ -471,12 +480,99 @@ input[type="file"] {
   border-radius: 5px;
 }
 
-.payement {
-  font-weight: bold;
-  font-family: "Roboto";
-  display: flex;
-  justify-content: center;
-  line-height: 200%;
+/*  PAIEMENT  */
 
-  /* flex-direction: column; */
+.payement-container {
+  line-height: 150%;
+  font-family: "Roboto";
+  margin: 0 auto;
+  padding: 36px 20px;
+  width: 600px;
+  /* border: solid red 1px; */
+  background-color: white;
+}
+
+.payement {
+  /* border: solid red 1px; */
+  width: 400px;
+}
+
+.title-buy {
+  color: #999;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 24px 24px 8px;
+}
+
+.content-buy {
+  padding: 24px;
+  text-align: justify;
+}
+
+.divider {
+  background: #a4a4a4;
+  display: block;
+  height: 1px;
+  margin: 24px 0;
+  width: 100%;
+}
+
+.final-pay {
+  background: #00c06d;
+  border: 1px solid;
+  border-color: #00c06d;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 44px;
+  line-height: 22px;
+  margin-top: 8px;
+  padding: 0 14px;
+  width: 100%;
+}
+
+.add-number-card {
+  border: 1px solid rgb(189, 189, 189);
+  height: 30px;
+  padding: 5px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+
+  box-shadow: 6px 4px 0px 0px rgba(0, 0, 0, 0.14);
+  -webkit-box-shadow: 6px 4px 0px 0px rgba(0, 0, 0, 0.14);
+  -moz-box-shadow: 6px 4px 0px 0px rgba(0, 0, 0, 0.14);
+}
+
+.resum-order {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.resum-order-detail {
+  display: flex;
+  justify-content: space-between;
+  color: #767676;
+}
+
+.content-buy p span {
+  font-weight: bold;
+}
+
+.resum-order-total {
+  display: flex;
+  justify-content: space-between;
+  color: black;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.page-detail {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }

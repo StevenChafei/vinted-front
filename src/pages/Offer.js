@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { /* Link,*/ useParams, useNavigate } from "react-router-dom";
 
 const Offer = () => {
   const [data, setData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   // Je récupère l'id présent dans l'url
   const params = useParams();
@@ -69,13 +71,30 @@ const Offer = () => {
             )}
             <span>{data.owner.account.username}</span>
           </div>
-          <Link
-            to="/payment"
-            state={{ title: "data.product_name", price: "data.product_price" }}
-          >
-            Acheter
-          </Link>
-          {/* <button >Acheter</button> */}
+          <div className="buy-article">
+            <button
+              onClick={() => {
+                const name = data.product_name;
+                const price = data.product_price;
+                navigate("/payment", {
+                  state: { title: { name }, price: { price } },
+                });
+              }}
+            >
+              Acheter
+            </button>
+            {/* </Link>
+
+            <Link
+              to="/payment"
+              state={{
+                title: { name },
+                price: { price },
+              }}
+            >
+              Acheter
+            </Link> */}
+          </div>
         </div>
       </div>
     </div>

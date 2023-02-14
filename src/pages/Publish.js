@@ -60,7 +60,7 @@ const Publish = ({ userToken }) => {
               <input
                 type="file"
                 onChange={(event) => {
-                  console.log(event.target.files[0]);
+                  // console.log(event.target.files[0]);
                   setPicture(event.target.files[0]);
                 }}
               />
